@@ -1,2 +1,32 @@
 # ClickFit
 Task implementation for Wave Group interview.
+
+## Description
+
+This is a full-stack demo project built as a technical task for On Wave Group's Junior Full Stack Developer position. The project includes a one-page sport/fitness-themed website, image upload functionality with a Node.js backend, and a MySQL user management setup.
+
+## Task Checklist
+
+### Frontend (HTML/CSS/JS only with Bootstrap + jQuery)
+
+- [ ] One-page website with title: **Click Fit**
+- [ ] Responsive design using **only**: HTML, CSS, JavaScript, **Bootstrap**, **jQuery**, and jQuery plugins
+- [ ] A **sport/fitness theme** with a **nice** design 
+- [ ] At least **two nice animations** to improve user experience
+- [ ] **AJAX call** after page load to: `http://numbersapi.com/1/30/date?json`
+  - [ ] Display the returned text visibly on the page
+  - [ ] Also write the same text to another area on the page
+
+### Image Upload (Client + Server)
+
+- [ ] Allow user to **drag & drop or click** to upload image(s)
+- [ ] Backend built in **Node.js** (no cloud storage)
+- [ ] Save uploaded files into: `/upload_images/` directory in project root
+
+### Backend: Node.js + MySQL
+
+- [ ] MySQL **users table** with fields:
+  - `userId`, `email`, `password`, `type`, `active`
+- [ ] Create a **stored procedure** named `addUser` to insert a new user
+- [ ] Add a **SQL script** that calls `addUser` with test values
+
