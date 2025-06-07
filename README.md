@@ -13,9 +13,8 @@ This is a full-stack demo project built as a technical task for On Wave Group's 
 - [ ] Responsive design using **only**: HTML, CSS, JavaScript, **Bootstrap**, **jQuery**, and jQuery plugins
 - [ ] A **sport/fitness theme** with a **nice** design 
 - [ ] At least **two nice animations** to improve user experience
-- [ ] **AJAX call** after page load to: `http://numbersapi.com/1/30/date?json`
-  - [ ] Display the returned text visibly on the page
-  - [ ] Also write the same text to another area on the page
+- [x] **AJAX call** after page load to: `http://numbersapi.com/1/30/date?json`
+  - [x] Display the returned text visibly on the page
 
 ### Image Upload (Client + Server)
 
