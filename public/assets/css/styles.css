@@ -1,0 +1,12 @@
+#upload-area {
+  cursor: pointer;
+}
+
+#upload-area input[type="file"] {
+  display: none;
+}
+
+#upload-area.dragover {
+  background-color: #e3f2fd;
+  border-color: #00c864;
+}

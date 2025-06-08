@@ -1,8 +1,26 @@
+let errorBg = "rgba(232, 76, 76, 0.9)";
+let successBg = "rgba(76, 232, 157, 0.9)";
+function showNotification(notifyText, bgColor, fgColor) {
+  $.toast({
+    text: notifyText,
+    showHideTransition: "fade",
+    bgColor: bgColor,
+    textColor: fgColor,
+    hideAfter: false,
+    stack: 5,
+    textAlign: "left",
+    position: "top-right",
+  });
+}
+
 $(document).ready(function () {
+  const errorMsg = "An unnexpected error has occured, please try again later";
+
   $.ajax({
     url: "http://numbersapi.com/1/30/date?json",
     method: "GET",
     success: function (data) {
+      showNotification(data.text, "rgba(240, 240, 240, 0.85)", "#2e2e2e");
       $("#number-api").text(data.text);
       const chipFields = ["year", "number"];
       let chipsHtml = "";
@@ -24,7 +42,8 @@ $(document).ready(function () {
       $("#number-api-chips").html(chipsHtml);
     },
     error: function () {
-      return;
+      $("#number-api").text(errorMsg);
+      showNotification(errorMsg, "rgba(232, 76, 76, 0.9)", "#f0f0f0");
     },
   });
 });
@@ -32,7 +51,6 @@ $(document).ready(function () {
 $(function () {
   const uploadArea = $("#upload-area");
   const fileInput = $("#file-input");
-  const status = $("#upload-status");
 
   uploadArea.on("dragover", function (e) {
     e.preventDefault();
@@ -57,7 +75,9 @@ $(function () {
   });
 
   uploadArea.on("click", () => fileInput.trigger("click"));
-
+  fileInput.on("click", function (e) {
+    e.stopPropagation();
+  });
   fileInput.on("change", function () {
     if (this.files.length > 0) {
       uploadFile(this.files[0]);
@@ -66,8 +86,7 @@ $(function () {
 
   function uploadFile(file) {
     if (!file.type.startsWith("image/")) {
-      status.text("Please upload a valid image file.");
-      return;
+      showNotification("Please upload a valid image file.", errorBg, "#fff");
     }
 
     const formData = new FormData();
@@ -80,10 +99,10 @@ $(function () {
       processData: false,
       contentType: false,
       success: function (res) {
-        status.text(res.message);
+        showNotification(res.message, successBg, "#fff");
       },
       error: function () {
-        return;
+        showNotification("Upload failed", errorBg, "#fff");
       },
     });
   }
