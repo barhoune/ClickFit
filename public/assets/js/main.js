@@ -45,6 +45,23 @@ $(document).ready(function () {
       showNotification(errorMsg, "rgba(232, 76, 76, 0.9)", "#f0f0f0");
     },
   });
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+    );
+  }
+
+  function animateOnScroll() {
+    $(".fade-in-up").each(function () {
+      if (isInViewport(this)) {
+        $(this).addClass("animated");
+      }
+    });
+  }
+
+  animateOnScroll();
+  $(window).on("scroll resize", animateOnScroll);
 });
 
 $(function () {

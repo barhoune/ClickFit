@@ -49,3 +49,19 @@
 .slide-up-appear {
     animation: slideUpAppear 0.6s ease forwards;
 }
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in-up.animated {
+    animation: fadeInUpCustom 1s ease-out forwards;
+}
+
+@keyframes fadeInUpCustom {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
