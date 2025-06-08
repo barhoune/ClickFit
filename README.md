@@ -26,7 +26,7 @@ This is a full-stack demo project built as a technical task for On Wave Group's 
 
 ### Backend: MySQL Task
 
-- [ ] MySQL **users table** with fields:
+- [x] MySQL **users table** with fields:
   - `userId`, `email`, `password`, `type`, `active`
-- [ ] Create a **stored procedure** named `addUser` to insert a new user
-- [ ] Add a **SQL script** that calls `addUser` with test values
+- [x] Create a **stored procedure** named `addUser` to insert a new user
+- [x] Add a **SQL script** that calls `addUser` with test values
