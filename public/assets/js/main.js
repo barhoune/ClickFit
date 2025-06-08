@@ -20,20 +20,19 @@ $(document).ready(function () {
     url: "http://numbersapi.com/1/30/date?json",
     method: "GET",
     success: function (data) {
-      showNotification(data.text, "rgba(240, 240, 240, 0.85)", "#2e2e2e");
+      showNotification(data.text, "rgba(255, 255, 255, 0.85)", "#2e2e2e");
       $("#number-api").text(data.text);
       const chipFields = ["year", "number"];
       let chipsHtml = "";
-      //TODO: Change btn classes when applying the new styles
-      chipFields.forEach(field => {
+      chipFields.forEach((field) => {
         switch (field) {
           case "year":
             if (data.year)
-              chipsHtml += `<span class="badge bg-primary me-1">Year: ${data.year}</span>`;
+              chipsHtml += `<span class="chip-single">Year: ${data.year}</span>`;
             break;
           case "number":
             if (data.number)
-              chipsHtml += `<span class="badge bg-primary me-1">Number: ${data.number}</span>`;
+              chipsHtml += `<span class="chip-single">Number: ${data.number}</span>`;
             break;
           default:
             break;
@@ -106,4 +105,14 @@ $(function () {
       },
     });
   }
+});
+
+$(function () {
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 10) {
+      $("nav.navbar").addClass("scrolled");
+    } else {
+      $("nav.navbar").removeClass("scrolled");
+    }
+  });
 });

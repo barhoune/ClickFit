@@ -22,14 +22,13 @@ const storage = multer.diskStorage({
   },
 });
 
-const upload = multer({storage});
+const upload = multer({ storage });
 
 app.use(express.static("public"));
 
-//TODO: Add a toast for user feedback
 app.post("/upload-image", upload.single("image"), (req, res) => {
   if (!req.file) {
-    return res.status(400).json({error: "No image uploaded"});
+    return res.status(400).json({ error: "No image uploaded" });
   }
   res.json({
     message: "Image uploaded successfully",
