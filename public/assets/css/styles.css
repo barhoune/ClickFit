@@ -215,3 +215,8 @@ nav.navbar.scrolled {
 #upload-area:hover {
   opacity: 0.7;
 }
+
+#upload-images-section {
+  margin-top: 2em;
+  background-color: #f8f8f8;
+}

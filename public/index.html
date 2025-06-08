@@ -56,19 +56,23 @@
         </header>
     </section>
 
-    <section class="container py-4" id="number-api-section">
-        <h5 class="number-api-title text-center">Information of the day</h5>
-        <p id="number-api" class="quote-text"></p>
-        <div id="number-api-chips" class="number-api-chips"></div>
+    <section id="number-api-section">
+        <div class="container py-4">
+            <h5 class="number-api-title text-center">Information of the day</h5>
+            <p id="number-api" class="quote-text"></p>
+            <div id="number-api-chips" class="number-api-chips"></div>
+        </div>
     </section>
 
-    <section class="container py-4" id="upload-images-section">
-        <h5 class="number-api-title text-center mb-4">Upload image</h5>
-        <div id="upload-area" class="upload-area rounded p-5 text-center">
-            <i class="fas fa-paperclip fa-5x mb-3"></i>
-            <p>Drag & drop an image here, or click to select a file</p>
+    <section id="upload-images-section">
+        <div class="container py-4">
+            <h5 class="number-api-title text-center mb-4">Upload image</h5>
+            <div id="upload-area" class="upload-area rounded p-5 text-center">
+                <i class="fas fa-paperclip fa-5x mb-3"></i>
+                <p>Drag & drop an image here, or click to select a file</p>
+            </div>
+            <input type="file" id="file-input" accept="image/*" style="display: none" />
         </div>
-        <input type="file" id="file-input" accept="image/*" style="display: none" />
     </section>
 </body>
 
