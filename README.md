@@ -19,7 +19,7 @@ This is a full-stack demo project built as a technical task for On Wave Group's 
   - [x] Also write the same text to another area on the page
 
 ### Image Upload (Client + Node.js Server)
-
+**Important Note** : this feature cannot work on the published page due to github pages not supporting Node.js yet
 - [x] Allow user to **drag & drop or click** to upload image
 - [x] Backend built in **Node.js** (no cloud storage)
 - [x] Save uploaded files into: `/upload_images/` directory in project root
