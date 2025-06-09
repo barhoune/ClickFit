@@ -17,7 +17,7 @@ $(document).ready(function () {
   const errorMsg = "An unnexpected error has occured, please try again later";
 
   $.ajax({
-    url: "http://numbersapi.com/1/30/date?json",
+    url: "https://api.allorigins.win/raw?url=http://numbersapi.com/1/30/date?json",
     method: "GET",
     success: function (data) {
       showNotification(data.text, "rgba(255, 255, 255, 0.85)", "#2e2e2e");
