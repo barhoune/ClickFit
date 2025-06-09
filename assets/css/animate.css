@@ -81,9 +81,9 @@
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(40px);
-    transition: transform 0.8s ease, opacity 0.8s ease;
+    transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .animate-on-scroll.visible {
-    animation: slideUp 0.8s ease forwards;
+    animation: slideUp 0.35s ease forwards;
 }
