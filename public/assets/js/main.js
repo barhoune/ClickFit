@@ -73,7 +73,7 @@ $(document).ready(function () {
       if (scrollTop + windowHeight > offsetTop + 50) {
         setTimeout(() => {
           el.addClass("visible");
-        }, index * 600);
+        }, index * 350);
       }
     });
   }
