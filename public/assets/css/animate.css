@@ -65,3 +65,25 @@
         transform: translateY(0);
     }
 }
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    animation: slideUp 0.8s ease forwards;
+}

@@ -62,6 +62,24 @@ $(document).ready(function () {
 
   animateOnScroll();
   $(window).on("scroll resize", animateOnScroll);
+
+  function animateCardOnScroll() {
+    $(".animate-on-scroll").each(function (index) {
+      const el = $(this);
+      const offsetTop = el.offset().top;
+      const scrollTop = $(window).scrollTop();
+      const windowHeight = $(window).height();
+
+      if (scrollTop + windowHeight > offsetTop + 50) {
+        setTimeout(() => {
+          el.addClass("visible");
+        }, index * 600);
+      }
+    });
+  }
+
+  $(window).on("scroll", animateCardOnScroll);
+  animateCardOnScroll();
 });
 
 $(function () {
