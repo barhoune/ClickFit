@@ -4,6 +4,7 @@
   "description": "Task implementation for Wave Group interview.",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,8 @@
     "express": "^5.1.0",
     "multer": "^2.0.1",
     "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
