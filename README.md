@@ -10,10 +10,10 @@ This is a full-stack demo project built as a technical task for On Wave Group's 
 
 ### Frontend (HTML/CSS/JS only with Bootstrap + jQuery)
 
-- [ ] One-page website with title: **Click Fit**
-- [ ] Responsive design using **only**: HTML, CSS, JavaScript, **Bootstrap**, **jQuery**, and jQuery plugins
-- [ ] A **sport/fitness theme** with a **nice** design
-- [ ] At least **two nice animations** to improve user experience
+- [x] One-page website with title: **Click Fit**
+- [x] Responsive design using **only**: HTML, CSS, JavaScript, **Bootstrap**, **jQuery**, and jQuery plugins
+- [x] A **sport/fitness theme** with a **nice** design
+- [x] At least **two nice animations** to improve user experience
 - [x] **AJAX call** after page load to: `http://numbersapi.com/1/30/date?json`
   - [x] Display the returned text visibly on the page
   - [x] Also write the same text to another area on the page
