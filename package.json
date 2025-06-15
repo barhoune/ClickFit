@@ -4,6 +4,7 @@
   "description": "Task implementation for Wave Group interview.",
   "main": "index.js",
   "scripts": {
+    "run": "node server.js",
     "deploy": "gh-pages -d public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
