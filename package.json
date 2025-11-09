@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/barhoune/ClickFit/issues"
   },
-  "homepage": "https://github.com/barhoune/ClickFit#readme",
+  "homepage": "https://barhoune.github.io/ClickFit",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
